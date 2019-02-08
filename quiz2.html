@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>Bucks Quiz</title>
+<link href ="style.css" rel ="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+<script src = "main.js"></script>
+
+</head>
+
+
+<body>
+<div class="scroll">
+<div class="parallax"></div>
+<div class="navbar">
+<nav>
+<a href="index.html"><b>Home</b> </a>&nbsp
+<a href="mailto:nicholasjdicr@gmail.com"><b>Contact Me</b> </a>
+</nav>
+</div>
+</div>
+<h1>Bucks Quiz </h1>
+
+<form id = "quiz" name = "quiz">
+
+
+<p class = "questions"> Throughout the 1980's, what were the Milwaukee Bucks known for?</p>
+<input id = "mc" type = "radio" name = "question1" value = "Free Throws"> Free Throws<br>
+<input id = "mc" type = "radio" name = "question1" value = "Defense"> Defense<br>
+<input id = "mc" type = "radio" name = "question1" value = "Dunking"> Dunking<br>
+<input id = "mc" type = "radio" name = "question1" value = "Three-Pointers"> Three-Pointers<br>
+
+<p class = "questions">The year 1993 saw the Milwaukee Bucks abandon their green uniforms for what color?</p>
+<input type = "radio" id = "mc" name = "question2" value = "Yellow"> Yellow<br>
+<input type = "radio" id = "mc" name = "question2" value = "Red"> Red<br>
+<input type = "radio" id = "mc" name = "question2" value = "Purple"> Purple<br>
+<input type = "radio" id = "mc" name = "question2" value = "Blue"> Blue<br>
+
+<p class = "questions">Who is this? <a href="https://www.nba.com/.element/media/2.0/teamsites/bucks/boeder-140614-7.jpg" target="blank">Image </a></p>
+
+<input type = "radio" id = "mc" name = "question3" value = "John Stockton"> John Stockton<br>
+<input type = "radio" id = "mc" name = "question3" value = "Larry Bird"> Larry Bird<br>
+<input type = "radio" id = "mc" name = "question3" value = "Jerry West"> Jerry West<br>
+<input type = "radio" id = "mc" name = "question3" value = "Brian Winters"> Brian Winters<br>
+
+<p class = "questions">What player on the Bucks averages the most steals per game in the 2018-19 season?</p>
+
+<input type = "radio" id = "mc" name = "question4" value = "Eric Bledsoe"> Eric Bledsoe<br>
+<input type = "radio" id = "mc" name = "question4" value = "Giannis Antetokounmpo"> Giannis Antetokounmpo<br>
+<input type = "radio" id = "mc" name = "question4" value = "Khris Middleton"> Khris Middleton<br>
+<input type = "radio" id = "mc" name = "question4" value = "Malcom Brogdon"> Malcom Brogdon<br>
+
+<p class = "questions">What player on the Bucks has the highest 3 point % in the 2018-19 season?</p>
+
+<input type = "radio" id = "mc" name = "question5" value = "Brook Lopez"> Brook Lopez<br>
+<input type = "radio" id = "mc" name = "question5" value = "Christian Wood"> Christian Wood<br>
+<input type = "radio" id = "mc" name = "question5" value = "D.J. Wilson"> D.J. Wilson<br>
+<input type = "radio" id = "mc" name = "question5" value = "Eric Bledsoe"> Eric Bledsoe<br>
+
+<p class = "questions">What player on the Bucks has the all time leading 3-pointers made for the team?</p>
+
+<input type = "radio" id = "mc" name = "question6" value = "Ray Allen"> Ray Allen<br>
+<input type = "radio" id = "mc" name = "question6" value = "Ersan Ilyasova"> Ersan Ilyasova<br>
+<input type = "radio" id = "mc" name = "question6" value = "Michael Redd"> Michael Redd<br>
+<input type = "radio" id = "mc" name = "question6" value = "Charlie Bell"> Charlie Bell<br>
+
+
+<input id = "button" type = "button" value = "I'm finished!" onclick = "check();">
+
+
+</form>
+
+<div id = "after_submit">
+<p id = "number_correct"></p>
+<p id = "message"></p>
+<img id = "picture"/>
+</div>
+</html>
+</body>
+
+<style>
+.parallax { 
+  /* The image used */
+  background-image: url("banner.png");
+
+  /* Set a specific height */
+  height: 300px;
+  width: 1920px;
+}
+nav {
+text-align:center;
+}
+
+body {
+background-color: #E0FFFF;
+}
+.navbar {
+  padding: 14px 19px;
+  overflow: hidden;
+  background-color: #C0C0C0;
+  font-family: "Arial";
+  color: blue;
+}
+
+
+.scroll{
+  position: -webkit-sticky; /* Safari */
+  position: sticky;
+  top: 0;
+}
+
+body {
+	font-family: 'Arial', sans-serif;
+}
+
+
+#quiz {
+	margin-left: 10px;
+	background: #d2def2;
+	padding: 10px 20px 10px 20px;
+	width: 400px;
+	border-radius: 20px;
+	float: left;
+
+}
+
+input {
+	margin-bottom: 20px;
+	display: block;
+}
+
+#textbox {
+	height: 25px;
+	font-size: 16px;
+	border-radius: 5px;
+	border: none;
+	padding-left: 5px;
+}
+
+
+#button {
+	background: green;
+	border: none;
+	border-radius: 5px;
+	padding: 10px;
+	color: white;
+	font-size: 16px;
+	transition-duration: .5s;
+	margin-top: 15px;
+}
+
+
+
+#button:hover {
+	background: white;
+	border: 1px solid green;
+	color: black;
+	cursor: pointer;
+
+}
+
+#after_submit {
+	visibility: hidden;
+	background: #ff5459;
+	padding: 10px 20px 10px 20px;
+	width: 400px;
+	border-radius: 20px;
+	float: left;
+	margin-left: 20px;
+	font-size: 30px;
+
+
+}
+
+#picture {
+	width: 375px;
+	height: 245px;
+}
+
+
+
+#mc {
+	display: inline;
+}
+</style>
+<script>
+function check(){
+
+	var question1 = document.quiz.question1.value;
+	var question2 = document.quiz.question2.value;
+	var question3 = document.quiz.question3.value;
+	var question4 = document.quiz.question4.value;
+	var question5 = document.quiz.question5.value;
+	var question6 = document.quiz.question6.value;
+	var correct = 0;
+
+
+	if (question1 == "Defense") {
+		correct++;
+}
+	if (question2 == "Purple") {
+		correct++;
+}	
+	if (question3 == "Brian Winters") {
+		correct++;
+}
+	if (question4 == "Eric Bledsoe") {
+		correct++;
+}
+	if (question5 == "Christian Wood") {
+		correct++;
+}
+	if (question6 == "Ray Allen") {
+		correct++;
+}
+	
+	var pictures = ["https://ae01.alicdn.com/kf/HTB1bou_KFXXXXbyXVXXq6xXFXXXB/Larry-O-Brien-NBA-Championship-Trophy-Full-Size.jpg", "https://ih0.redbubble.net/image.465835597.7549/flat,550x550,075,f.u1.jpg", "https://previews.123rf.com/images/pockygallery/pockygallery1508/pockygallery150800259/43417431-you-lose-red-stamp-text-on-white.jpg"];
+	var messages = ["Amazing Job!", "Not bad!", "You suck!!!"];
+	var score;
+
+	if (correct == 0) {
+		score = 2;
+	}
+
+	if (correct > 0 && correct < 6) {
+		score = 1;
+	}
+
+	if (correct == 6) {
+		score = 0;
+	}
+
+	document.getElementById("after_submit").style.visibility = "visible";
+
+	document.getElementById("message").innerHTML = messages[score];
+	document.getElementById("number_correct").innerHTML = "You got " + correct + " correct.";
+	document.getElementById("picture").src = pictures[score];
+	}
+</script>
